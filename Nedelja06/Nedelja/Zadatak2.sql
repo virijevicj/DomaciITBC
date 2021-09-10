@@ -9,7 +9,8 @@ WHERE relationship LIKE 'Child'
               INNER JOIN departments ON employees.department_id = departments.department_id)a
           WHERE sort = 1)
 
---employee_id 121 nema child u tabeli dependents, zato gornji upit vraca 10 njih(resenje je kod iznad) a ima 11 odeljenja; dokaz ispod
+--employee_id 121 nema child u tabeli dependents, zato gornji upit vraca 10 njih(resenje je kod iznad, namerno sam stavio vise kolona u tabeli a nego
+--sto treba da bi mogao da shvatis sta sam uradio)a ima 11 odeljenja; dokaz ispod
 SELECT employee_id from dependents
 intersect
 SELECT employee_id
